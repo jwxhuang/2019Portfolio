@@ -1,130 +1,74 @@
-html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-body{
-  padding: 0px;
-  margin: 0px;
-  background-color: #85FFBD;
-  background-image: radial-gradient(farthest-corner at 79% -108%, #FBF7D5 3%, #E6F6D6 31%, #54ECDC 100%);
-  /* background-image: linear-gradient(30deg, #54ECDC 0%, #E6f6D6 70%, #fBF7D5 100%); */
-}
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
 
-.eyesnlashes{
-  height: 270px;
-  width: 274px;
-  position: relative;
-}
 
-.eye1{
-  right: -40%;
-  top: -20px;
-  transform: rotate(27deg);
-}
-
-.eye2{
-  right: -10%;
-  bottom: 0;
-  transform: rotate(-153deg);
-
-}
-
-.lashbox{
-  height: 108px;
-  width: 274px;
-  position: relative;
-}
-.lash{
-  height:71px;
-  width:30px;
-  background-color: black;
-  border-radius: 15px;
-  position: absolute;
-}
-.lash1{
-  left: 50%;
-  transform: translate(-50%,0);
-}
-.lash2{
-  right : 19px;
-  bottom: 0;
-  transform: rotate(42deg);
-}
-.lash3{
-  bottom: 0;
-  left: 19px;
-  transform: rotate(-42deg);
-}
-
-.eyesbox{
-  height: 165px;
-  width: 165px;
-  bottom: 15px;
-  left: 50%;
-  transform: translate(-50%,0);
-  position: absolute;
-  border-radius: 50%;
-  overflow: visible;
-}
-
-.eyewhite{
-  height: 144px;
-  width: 144px;
-  background-color: #73F5FB;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  position: absolute;
-  border-radius: 50%;
-}
-.ball{
-  height: 78px;
-  width: 78px;
-  background-color: black;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  position: absolute;
-  border-radius: 50%;
-}
-
-.ring{
-  height: 670px;
-  width: 670px;
-  position: absolute;
-  background-image: url(Assets/ring_combined_shape.png);
-  top: 30px;
-  left: -250px;
-}
-
-.sphere{
-  height: 463px;
-  width: 463px;
-  position: absolute;
-  background-image: radial-gradient(farthest-corner at 86% -140%, #FCAFFF 5%, #F1F7D6 140%);
-  border-radius: 50%;
-
-}
-
-.sphere1{
-  top: 450px;
-  left: 500px;
-}
-.sphere2{
-  top: 100px;
-  left: 1120px;
-}
+  <div class="ring"></div>
+  <div class="sphere sphere1"></div>
+  <div class="sphere sphere2"></div>
 
 
-.jwxhuang{
-  font-family: Futura-Bold;
-  font-size: 48px;
-  color: #000000;
-  letter-spacing: 0.98px;
-  position: absolute;
-  top: 75%;
-  right: 0;
-}
+  <div class="eyesnlashes eye1">
+    <div class="lashbox">
+      <div class="lash lash1"></div>
+      <div class="lash lash2"></div>
+      <div class="lash lash3"></div>
+    </div>
+    <div class="eyesbox">
+      <div class="eyewhite"></div>
+      <div class="ball"></div>
+    </div>
+  </div>
+
+  <div class="eyesnlashes eye2">
+    <div class="lashbox">
+      <div class="lash lash1"></div>
+      <div class="lash lash2"></div>
+      <div class="lash lash3"></div>
+    </div>
+    <div class="eyesbox">
+      <div class="eyewhite"></div>
+      <div class="ball"></div>
+    </div>
+  </div>
+
+
+
+  <h1 class="jwxhuang">
+    JWXHUANG
+  </h1>
+  <h2 class="h2">
+    PRODUCT DESIGNER
+  </h2>
+
+  <script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = function() {
+      var x1 = event.clientX * 100 / window.innerWidth + "%";
+      var y1 = event.clientY * 100 / window.innerHeight + "%";
+
+      var x2 = (event.clientX) * 100 / window.innerWidth + "%";
+      var y2 = (event.clientY) * 100 / window.innerHeight + "%";
+
+      balls[0].style.left = x1;
+      balls[0].style.top = y1;
+      balls[0].style.transform = "translate(-" + x1 + ",-" + y1 + ")";
+
+      balls[1].style.left = x2;
+      balls[1].style.top = y2;
+      balls[1].style.transform = "translate(-" + x2 + ",-" + y2 + ")";
+    }
+  </script>
+
+
+</body>
+
+</html>
