@@ -1,10 +1,10 @@
 # 2019Portfolio
 Documentation fo rmy portfolio login page. 
 
-V2.
 
-
-![Alt text](/Assets/ring_combined_shape.png)
-
-
+V2. 
 https://jwxhuang.github.io/2019Portfolio/index.html
+
+
+![Alt text](/Assets/V2.png)
+
